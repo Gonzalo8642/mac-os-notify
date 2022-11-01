@@ -1,0 +1,19 @@
+#!/usr/bin/osascript
+
+# Description: Displays a MacOS notification
+# Parameter 1: description
+# Parameter 2: title
+#
+# Usage 1: notify "My description" "My title"
+# Usage 2: nofity "My description"
+# Usage 3: notify
+on run argv
+    if (count of argv) = 1
+        display notification quoted form of item 1 of argv sound name "Submarine"
+    else if (count of argv) = 2
+        display notification quoted form of item 1 of argv with title quoted form of item 2 of argv sound name "Submarine"
+    else
+       display notification "Task done" sound name "Submarine"
+    end
+end run
+
